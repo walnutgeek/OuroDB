@@ -13,9 +13,9 @@ Ideas:
   * Content of db organized in files. Files are append only. Blobs are splited in chunks and appended to files. Files continuously hashed and referer hashes of previous file creating temper resistant chain (blockchain). File size regulated by MAX_FILE_SZ.
   * Chanks stored in file as blocks. Block contains header followed by raw data. 
   * The block header contains SHA2 of raw data, and chunk size, SHA2 of previous block header or previous file footer.
-  * Open file maintain block allocation table in memory, and append it to end of file when file is finshed.
-  * Finishing block with reference to begininig of block alloccation table and SHA2 of last block header.
-  * Block types: RAW, CATALOG, DELETE,  
+  * Open file maintain block allocation table in memory, and append it to the end of the file when file is about to be finshed.
+  * Finishing block (file footer) has reference to begininig of block allocation table and SHA2 of last block header.
+  * Block types: RAW, CHUNK, CATALOG, DELETE, RESTORE.  
   * 
 
  
