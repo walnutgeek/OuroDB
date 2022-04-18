@@ -15,7 +15,7 @@ Ideas:
   * The block header contains SHA2 of raw data, and chunk size, SHA2 of previous block header or previous file footer.
   * Open file maintain block allocation table in memory, and append it to the end of the file when file is about to be finshed.
   * Finishing block (file footer) has reference to begininig of block allocation table and SHA2 of last block header.
-  * Block types: RAW, CHUNK, CATALOG, DELETE, RESTORE.  
+  * Block types: first bit defines structure RAW data or EXTENDED cut in chunks:  0:RAW, 1:EXTENDED. following 7 bits define content and some of types will be user feined.
   * 
 
  
